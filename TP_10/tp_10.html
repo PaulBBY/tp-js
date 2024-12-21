@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-
+scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="tp_10.js">
+    </script>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1>Form</h1>
+        <form id="form" action="https://digicode.cleverapps.io/utilisateurs/create" method="POST">
+            <input type="hidden" name="identite" value="$nom">
+            <div class="mb-3">
+                <label for="firstName">First Name : </label>
+                <input id="firstName" type="text">
+            </div>
+            <div class="mb-3">
+                <label for="secondName">Second Name : </label>
+                <input id="secondName" type="text">
+            </div>
+            <div class="mb-3">
+                <label for="birthDate">Date of Birth : : </label>
+                <input id="birthDate" type="date">
+            </div>
+            <div class="mb-3">
+                <label for="d">Location of birth : </label>
+                <input id="locationBirth" type="text">
+            </div>
+            <div class="mb-3">
+                <label for="deptBirth" class="form-label">Department of Birth :</label>
+                <select id="deptBirth" name="deptBirth" class="form-select" required>
+                    <option value="" disabled selected>Select your department</option>
+                    <option value="09">Ariège (09)</option>
+                    <option value="011">Aude (11)</option>
+                    <option value="12">Aveyron (12)</option>
+                    <option value="30">Gard (30)</option>
+                    <option value="31">Haute-Garonne (31)</option>
+                    <option value="32">Gers (32)</option>
+                    <option value="34">Hérault (34)</option>
+                    <option value="46">Lot (46)</option>
+                    <option value="48">Lozère (48)</option>
+                    <option value="65">Haute-Pyrénées (65)</option>
+                    <option value="66">Pyrénées-Orientales (66)</option>
+                    <option value="81">Tarn (81)</option>
+                    <option value="82">Tarn-et-Garonne (82)</option>
+                </select>
+            </div>
+            <fieldset>
+                <legend>Direction</legend>
+                <div class="mb-3">
+                    <label for="streetNumber" class="form-label">Street number</label>
+                    <input type="number" id="streetNumber" name="streetNumber" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="streetName" class="form-label">Street name</label>
+                    <input type="text" id="streetName" name="streetName" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="postalCode" class="form-label">Postal code</label>
+                    <input type="text" id="postalCode" name="postalCode" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="city" class="form-label">City</label>
+                    <input type="text" id="city" name="city" class="form-control" required>
+                </div>
+            </fieldset>
+            <div class="d-flex justify-content-between">
+                <input type="button" value="Vlidate" class="btn btn-primary" onclick="validateForm()">
+                <button type="reset" class="btn btn-secondary">Errase</button>
+            </div>
+        </form>
+        <div id="errors" class="error-message d-none"></div>
+    </div>
+
+
+
+
+</body>
+
+</html>
